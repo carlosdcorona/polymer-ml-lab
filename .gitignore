@@ -1,0 +1,14 @@
+.venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Data / artifacts (optional)
+data/*
+!data/README.md
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.vscode/
+
