@@ -5,7 +5,7 @@ This repository reframes the project as a didactic scientific study: we use mach
 
 ## Learning Focus
 - **From theory to lab:** encode physical constraints (mass balance, process limits) and let ML surface which formulations deserve experimental budget.
-- **Transparent methodology:** every step—data generation, modeling, optimization—is documented so a reviewer can follow the reasoning end to end.
+- **Transparent methodology:** every stepâ€”data generation, modeling, optimizationâ€”is documented so a reviewer can follow the reasoning end to end.
 - **Reproducible insights:** notebooks double as lab books, showing how virtual experiments evolve and which recommendations emerge.
 
 ## Repository Map
@@ -24,7 +24,7 @@ This repository reframes the project as a didactic scientific study: we use mach
 2. **Generate pseudo-lab data:** draw thousands of formulations that satisfy ~100 wt% and process bounds, project them through physics-inspired equations, and obtain target properties with controlled noise.
 3. **Train surrogate models:** quantify how well each target (tensile strength, elongation, thermal resistance) can be predicted with little data; keep track of uncertainty to avoid overconfident recommendations.
 4. **Prioritize lab experiments:** use constrained candidate generation + Upper Confidence Bound (UCB) scoring to suggest formulations most likely to outperform current bests while still exploring novel regions.
-5. **Iterate:** simulate the measurement of proposed candidates, append them to the dataset, retrain, and observe how the Pareto front tightens—mirroring a real design-make-test cycle.
+5. **Iterate:** simulate the measurement of proposed candidates, append them to the dataset, retrain, and observe how the Pareto front tightensâ€”mirroring a real design-make-test cycle.
 
 ## Running the Project
 1. **Set up the environment**
@@ -46,12 +46,10 @@ This repository reframes the project as a didactic scientific study: we use mach
 
 ## Expected Results & Insights
 - **Physics-consistent trends:** filler increases tensile strength but hurts elongation; plasticizer does the opposite; temperature shows a bell-shaped optimum.
-- **Modeling takeaway:** Random Forest surrogates stay robust even when data is throttled to 20–30 samples, illustrating why ML can pre-filter hypotheses before lab work.
+- **Modeling takeaway:** Random Forest surrogates stay robust even when data is throttled to 20â€“30 samples, illustrating why ML can pre-filter hypotheses before lab work.
 - **Optimization payoff:** the UCB-driven loop narrows the Pareto front in ~3 iterations, so only the top ~5% of theoretical candidates would be sent to the lab for confirmation.
 
 ## Limitations & Next Steps
 - Synthetic data approximates reality; once true lab data arrives, plug it into the same notebooks or swap surrogates for Gaussian Processes.
-- Current optimization uses heuristic search—future work can integrate Bayesian Optimization or evolutionary algorithms for better sample efficiency.
+- Current optimization uses heuristic searchâ€”future work can integrate Bayesian Optimization or evolutionary algorithms for better sample efficiency.
 - Add domain-specific constraints (cost, aging, rheology) as additional targets to make the lab recommendations production-ready.
-
-By following this structure you can present the repository as a complete scientific narrative: theory ? ML-assisted screening ? lab-ready recommendations.
